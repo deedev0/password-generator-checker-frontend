@@ -117,36 +117,41 @@
           <div class="row">
             <div class="col-lg-4" style="font-size: 12px">
               Kekuatan Password:
-              <span id="strength" class="text-danger"> Lemah</span>
+              <span id="strength"></span>
             </div>
             <div class="col-lg-4" style="font-size: 12px">
               Password Terexpose sebanyak:
-              <span id="exposed" class="text-warning"> 10 kali</span>
+              <span id="exposed"></span>
             </div>
             <div class="col-lg-4" style="font-size: 12px">
               Estimasi Password dihack:
-              <span id="cracked" class="text-success"> 30 tahun</span>
+              <span id="cracked"></span>
             </div>
             <div class="col-lg-12">
               <div
                 class="p-4 my-3 border text-center rounded-5"
-                style="background-color: #03001c"
+                style="
+                  background-color: #03001c;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                "
               >
-                <span style="font-size: 24px">9cQadx6CfZWyVZ</span>
+                <span style="font-size: 24px" id="passwordGenerated"></span>
               </div>
             </div>
             <div class="col-lg-12 d-flex justify-content-center mt-2">
-              <button class="btn btn-primary mx-3">
+              <button class="btn btn-primary mx-3" id="btnCopytoClipboard">
                 <i class="fa fa-clone" aria-hidden="true"></i> Copy ke clipboard
               </button>
-              <button class="btn btn-success mx-3">
+              <button class="btn btn-success mx-3" id="btnRepeatGenerate">
                 <i class="fa fa-refresh" aria-hidden="true"></i> Generate Ulang
               </button>
             </div>
             <div class="col-lg-12 px-5 mt-3">
               <div class="row" style="font-size: 19px">
                 <p>
-                  Characters: <span id="charNumber" class="inline">10</span>
+                  Jumlah Karakter:
+                  <span id="charNumber" class="inline"></span>
                 </p>
               </div>
               <div class="row">
@@ -161,7 +166,7 @@
               </div>
             </div>
             <div class="col-lg-12 mt-3 px-5">
-              <div class="row">Additional Options</div>
+              <div class="row">Opsi Tambahan:</div>
               <div class="row">
                 <div class="col-lg-12">
                   <form>
@@ -170,11 +175,11 @@
                         <input
                           class="form-check-input"
                           type="checkbox"
-                          id="capital"
+                          id="uppercase"
                           value=""
                           checked
                         />
-                        <label class="form-check-label" for="capital">
+                        <label class="form-check-label" for="uppercase">
                           A-Z
                         </label>
                       </div>
