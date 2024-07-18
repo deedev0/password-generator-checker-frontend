@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:9000';
+const BASE_URL = 'https://passfort-passwordcheckergeneratorbzid.biz.id/api';
 
 class GeneratorsApi {
     static async generatePassword(payload) {
@@ -8,7 +8,7 @@ class GeneratorsApi {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(payload)
+                body: JSON.stringify(payload),
             });
             const responseJson = await response.json();
             return responseJson.data;
